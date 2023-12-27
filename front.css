@@ -1,0 +1,522 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Caveat', cursive;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 25px;
+    font-family: sans-serif;
+    width: 100%;
+    /* background-color: gray; */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 54px 99px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 10px;
+}
+
+#search {
+    width: 25%;
+    padding: 5px;
+    font-family: sans-serif;
+    outline: none;
+    offset: none;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.menu select{
+    outline: none;
+    offset: none;
+    border: none;
+    font-size: 25px;
+}
+
+.menu a:hover {
+    /* color: black;
+    /* padding: 5px; 
+    border-radius:20%;
+    background-color: #fff;
+    padding:5px; */
+}
+.menu button::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: red;
+    left: 0;
+    bottom: -1px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: .5s;
+}
+
+.menu button:hover::after {
+    width: 100%;
+
+}
+
+.menu button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    font-size: 25px;
+    transition: .3s;
+    position: relative;
+    text-decoration: none;
+    color: black;
+   
+    left: 0;
+}
+
+.tshirt {
+    margin-top: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 20px;
+    background-color: rgb(44, 214, 44);
+    display: inline-block;
+    padding: 10px;
+}
+
+.image-container {
+    margin-top: 10px;
+    position: absolute;
+    width: 170px;
+    height: 200px;
+    margin-left: 25px;
+}
+
+.img-front img {
+    width: 100%;
+    height: 100%;
+}
+
+.image-card {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.image-card:hover {
+    transform: rotatey(180deg);
+
+}
+
+.img-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.img-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transform: rotatey(180deg);
+    background-color: rgba(133, 133, 233, 0.717);
+    border-radius: 10px;
+}
+
+.img-back button {
+    text-align: center;
+    background-color: rgb(201, 25, 25);
+    border: none;
+    offset: none;
+    outline: none;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+    margin-top: 50px;
+    transition: .4s;
+}
+
+.img-back button:hover {
+    background-color: rgb(96, 196, 96);
+    ;
+}
+
+.image-container p {
+    font-size: 17px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.image-container p strike {
+    font-size: 10px;
+}
+
+.flex{
+    display: flex;
+ box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+}
+#add{
+   left: 78%;
+   position: absolute;
+   top: 400px;
+    display: none;
+    transition: .6s;
+    margin-left: 10px;
+    position: fixed;
+    z-index: 2;
+    height: 30%;
+}
+#skip{
+    border-radius: 4px;
+    border: none;
+  color: #fff;
+  font-weight:400;
+  background-color: black;
+    display: none;
+ position: absolute;
+ left: 94%;
+ top:537px ;
+ font-size: 17px;
+ padding-left: 10px;
+ padding-right: 10px;
+ padding-top: 5px;
+ padding-bottom: 5px;   
+ position: fixed;
+ z-index: 2;
+}
+.eluvation img{
+    margin-top: 10px;
+    width: 100%;
+}
+.split{
+    width: 50%;
+    display:block;
+    background-color: red;
+    z-index: 3;
+}
+
+#video{
+    margin-top: 10px;
+    margin-right: 4px;
+  width: 35%;
+    position: absolute;
+    height: 58%;
+    
+    z-index: 3;
+    display: inline-block;
+    margin-left: 8px;
+    border-radius: 10px;
+}
+/*login&register*/
+.box{
+    display: none;
+}
+.box1{
+    display: none;
+    border: 1px solid black;
+    width: 40%;
+  position: absolute;
+   height: 330px;
+   top: 30%;
+   left:28%;
+   z-index: 4;
+   border-radius: 20px;
+  position: fixed;
+ background-image: url("./image/eluvation.jpg");
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+.box1 input[type=button]{
+    background: transparent;
+    border: none;
+       float: right;
+       margin-right: 10px;
+       margin-top: -30px;
+       font-size: 26px;
+       font-family: Arial, Helvetica, sans-serif;
+       cursor: pointer;
+}
+
+form{
+    border: 1px solid black;
+    width: 40%;
+  position: absolute;
+   height: 275px;
+   top: 30%;
+   left:28%;
+   z-index: 4;
+   border-radius: 20px;
+  position: fixed;
+ background-image: url("/image/eluvation.jpg");
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+form h1{
+font-family:sans-serif;
+margin-top: 10px;
+}
+form input[type=button]{
+ background: transparent;
+ border: none;
+    float: right;
+    margin-right: 10px;
+    margin-top: -30px;
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+.form-group
+{
+    height: 48px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.form-control{
+    position: absolute;
+    font-size: 20px;
+    left: 20%;
+    top: 10px;
+    width: 60%;
+    height: 90%;
+    background: none;
+    border: 1px solid black;
+    outline: none;
+    padding: 16px;
+    border-radius: 6px;
+    z-index: 1;
+}
+.form-label{
+    position: absolute;
+    left: 23%;
+    top: 19px;
+    color: black;
+    font-weight: 300;
+    /* background-color: #fff; */
+font-size: 17px;
+transition: 0.3s ease;    
+}
+.form-control:focus+ .form-label{
+    top: 0px;
+    background-image: url('eluvation.jpg');
+    border-radius: 4px;
+    z-index: 2;
+    color:blue;
+    font-weight: 300;
+}
+.form-control:focus{
+    border: 1px solid blue;
+}
+.form-control:not(:focus):valid+label{
+    top: 0px;
+    background-image: url('eluvation.jpg');
+    border-radius: 4px;
+    z-index: 2;
+}
+ .show{
+    position: absolute;
+    left: 20%;
+    top: 10px;
+}
+.show #show1{
+    outline: none;
+    position: absolute;
+    left: 0%;
+    top: 34px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    background-color: #fff;
+}
+
+#show{
+    outline: none;
+    position: absolute;
+    left: 0%;
+    top: 34px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    background-color: #fff;
+}
+.forget{
+   margin-left:-10px;
+   display: flex;
+   justify-content: space-evenly;
+
+}
+.but{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-size: 17px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.but:hover{
+    box-shadow: px 5px 4px black;
+}
+.cart {
+    display: block;
+    width: 98%;
+    margin-left: 14px;
+    border-radius: 10px;
+    height: 50vh;
+    background-color:#18161E;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.inline{
+    display: inline-flex;
+    color: white;
+    position: absolute;
+    top: 13%;
+    left: 80px;
+}
+.inline ul{
+    list-style: none;
+}
+.inline ul li{
+    margin-top: 10px;
+    font-size: 20px;
+    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.center{
+    display: inline-flex;
+    color: white;
+    position: absolute;
+    top: 13%;
+    left: 26%;
+}
+.center ul{
+    list-style: none;
+}
+.center ul li{
+    margin-top: 10px;
+    font-size: 20px;
+    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.center1{
+    display: inline-flex;
+    color: white;
+    position: absolute;
+    top: 13%;
+    left: 46%;
+}
+.center1 ul{
+    list-style: none;
+}
+.center1 ul li{
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.input{
+    color: white;
+    float: right;
+    /* margin-left: -10%; */
+    margin-right: 7%;
+    margin-top: 90px;
+}
+.input h3{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.input input{
+    padding: 10px;
+    margin-top: 12px;
+    background-color: transparent;
+    offset: none;
+    outline: none;
+    outline-offset: none;
+    border: #fff solid 1px;
+    border-radius: 3px;
+    color: #fff;
+}
+.input input::placeholder{
+    color: #fff;
+}
+.input  button{
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    font-weight: 600;
+    transition: .3s;
+}
+.input  button:hover{
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    
+}
+.input p{
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.input img{
+    width: 8%;
+    margin-top: 8px;
+    margin-left: 7px;
+    
+}
+.main{
+    overflow: scroll;
+}
+.main ul{
+    list-style: none;
+    overflow: hidden;
+   
+
+}
+.main ul li{
+
+    display: inline-block;
+    margin-left: 15px;
+}.main ul li img{
+    width: 50%;
+
+}
+
+.main button{
+    padding: 5px;
+    content:'conform';
+    background-color: green;
+   color: #fff;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    top: auto;
+    left: auto;
+}
+.main button::after{
+    content:'conform';
+    /* background-color: green;
+    border: none;
+    border-radius: 4px; */
+}
